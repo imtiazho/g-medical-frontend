@@ -6,8 +6,8 @@ const NavBar = () => {
     const navItems = (
         <>
             <li className='lg:text-black text-white'><Link className='active:text-white' to="/">HOME</Link></li>
-            <li className='lg:text-black text-white'><Link className='active:text-white' to="/">ABOUT</Link></li>
-            <li className='lg:text-black text-white'><Link className='active:text-white' to="/">SERVICE</Link></li>
+            <li className='lg:text-black text-white'><Link className='active:text-white' to="/about-sec">ABOUT</Link></li>
+            <li className='lg:text-black text-white'><Link className='active:text-white' to="/service-sec">SERVICE</Link></li>
             <li className='lg:text-black text-white'><Link className='active:text-white' to="/our-doctor">DOCTORS</Link></li>
             <li className='lg:text-black text-white'><Link className='active:text-white' to="/">BLOG</Link></li>
             <li className='lg:text-black'><Link className='active:text-white' to="/">PORTFOLIO</Link></li>
@@ -25,7 +25,7 @@ const NavBar = () => {
                         {navItems}
                     </ul>
                 </div>
-                <Link className='lg:text-3xl font-bold text-primary flex items-center gap-1 sm:text-2xl'> <CiMedicalCross /> MEDICAL</Link>
+                <Link className='lg:text-3xl font-bold text-primary flex items-center gap-1 sm:text-2xl'> <CiMedicalCross /> MEDIZ</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

@@ -5,6 +5,8 @@ import OurDoctor from './Components/OurDoctor/OurDoctor';
 import NavBar from './Components/NavBar/NavBar';
 import UpperNav from './Components/UpperNav/UpperNav';
 import Footer from './Components/Footer/Footer';
+import About from './Components/About/About';
+import Service from './Components/Service/Service';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/our-doctor' element={<OurDoctor></OurDoctor>}></Route>
+        <Route path='/about-sec' element={<About></About>}></Route>
+        <Route path='/service-sec' element={<Service></Service>}></Route>
       </Routes>
       <Footer />
     </div>

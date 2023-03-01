@@ -7,6 +7,8 @@ import { IoMdListBox } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+    const today = new Date().getFullYear();
+
     return (
         <footer>
             <div className="footer p-10 text-base-content mt-32">
@@ -61,7 +63,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className='text-center text-secondary py-8'>
-                <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
+                <p>{`Copyright © ${today} - This site is designed and developed by imtiaz Hossain`}</p>
             </div>
         </footer>
     );

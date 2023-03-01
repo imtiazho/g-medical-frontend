@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 const SingleDoctorCard = ({ doctor }) => {
     const [mousein, setMousein] = useState(false);
     const { _id, name, dept, img } = doctor;
+
     return (
         <div onMouseLeave={() => setMousein(false)} onMouseEnter={() => setMousein(_id)} className="card w-96 bg-base-100 shadow-xl">
             <figure className='relative'>
