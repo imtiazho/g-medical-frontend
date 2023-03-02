@@ -20,7 +20,7 @@ const HeartAndSeicence = () => {
 
                     <Link className='btn btn-primary text-white' to=''>MEET OUR TEAM</Link>
                 </div>
-                <div>
+                <div className='p-6'>
                     <img src={aboutRightPicture} alt="" />
                 </div>
             </div>
