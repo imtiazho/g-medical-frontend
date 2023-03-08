@@ -7,7 +7,7 @@ module.exports = {
     themes: [
       {
         gMedicalTheme: {
-          primary: "#5170CA",
+          primary: "#4d93e9",
           secondary: "#4f4f4f",
           accent: "#4FD4CA",
         },
