@@ -7,6 +7,7 @@ import doctorpic3 from '../../assets/3.jpg';
 import doctorpic4 from '../../assets/4.jpg';
 import doctorpic5 from '../../assets/5.jpg';
 import doctorpic6 from '../../assets/6.jpg';
+import { Link } from 'react-router-dom';
 
 const HealthProfessional = () => {
 
@@ -24,8 +25,8 @@ const HealthProfessional = () => {
                     <img className='mb-2 xl:mb-6 lg:mb-6 md:mb-6 sm:mb-6' src={doctorpic1} alt="" />
 
                     <div>
-                        <h3 className='xl:text-xl lg:text-xl md:text-xl md:text-xl sm:text-xl text-md text-primary mb-2 font-bold'>Jousha Clark</h3>
-                        <p className='text-xs'>Anesthesiologist</p>
+                        <Link to='/doctor-profile/1' className='xl:text-xl lg:text-xl md:text-xl md:text-xl sm:text-xl text-md text-primary font-bold'>Jousha Clark</Link>
+                        <p className='text-xs mt-2'>Anesthesiologist</p>
                     </div>
                 </SwiperSlide>
 
@@ -33,8 +34,8 @@ const HealthProfessional = () => {
                     <img className='mb-2 xl:mb-6 lg:mb-6 md:mb-6 sm:mb-6' src={doctorpic2} alt="" />
 
                     <div>
-                        <h3 className='xl:text-xl lg:text-xl md:text-xl md:text-xl sm:text-xl text-md text-primary mb-2 font-bold'>Steven Jacob</h3>
-                        <p className='text-xs'>Anesthesiologist</p>
+                        <Link to='/doctor-profile/2' className='xl:text-xl lg:text-xl md:text-xl md:text-xl sm:text-xl text-md text-primary font-bold'>Steven Jacob</Link>
+                        <p className='text-xs mt-2'>Anesthesiologist</p>
                     </div>
                 </SwiperSlide>
 
@@ -42,8 +43,8 @@ const HealthProfessional = () => {
                     <img className='mb-2 xl:mb-6 lg:mb-6 md:mb-6 sm:mb-6' src={doctorpic3} alt="" />
 
                     <div>
-                        <h3 className='xl:text-xl lg:text-xl md:text-xl md:text-xl sm:text-xl text-md text-primary mb-2 font-bold'>Jhua Bunton</h3>
-                        <p className='text-xs'>Allergist</p>
+                        <Link to='/doctor-profile/3' className='xl:text-xl lg:text-xl md:text-xl md:text-xl sm:text-xl text-md text-primary font-bold'>Jhua Bunton</Link>
+                        <p className='text-xs mt-2'>Allergist</p>
                     </div>
                 </SwiperSlide>
 
@@ -51,8 +52,8 @@ const HealthProfessional = () => {
                     <img className='mb-2 xl:mb-6 lg:mb-6 md:mb-6 sm:mb-6' src={doctorpic4} alt="" />
 
                     <div>
-                        <h3 className='xl:text-xl lg:text-xl md:text-xl md:text-xl sm:text-xl text-md text-primary mb-2 font-bold'>Emil Hadena</h3>
-                        <p className='text-xs'>Neurosurgeon</p>
+                        <Link to='/doctor-profile/4' className='xl:text-xl lg:text-xl md:text-xl md:text-xl sm:text-xl text-md text-primary font-bold'>Emil Hadena</Link>
+                        <p className='text-xs mt-2'>Neurosurgeon</p>
                     </div>
                 </SwiperSlide>
 
@@ -60,8 +61,8 @@ const HealthProfessional = () => {
                     <img className='mb-2 xl:mb-6 lg:mb-6 md:mb-6 sm:mb-6' src={doctorpic5} alt="" />
 
                     <div>
-                        <h3 className='xl:text-xl lg:text-xl md:text-xl md:text-xl sm:text-xl text-md text-primary mb-2 font-bold'>David James</h3>
-                        <p className='text-xs'>Anesthesiologist</p>
+                        <Link to='/doctor-profile/5' className='xl:text-xl lg:text-xl md:text-xl md:text-xl sm:text-xl text-md text-primary font-bold'>David James</Link>
+                        <p className='text-xs mt-2'>Anesthesiologist</p>
                     </div>
                 </SwiperSlide>
 
@@ -69,8 +70,8 @@ const HealthProfessional = () => {
                     <img className='mb-2 xl:mb-6 lg:mb-6 md:mb-6 sm:mb-6' src={doctorpic6} alt="" />
 
                     <div>
-                        <h3 className='xl:text-xl lg:text-xl md:text-xl md:text-xl sm:text-xl text-md text-primary mb-2 font-bold'>Thomas Paul</h3>
-                        <p className='text-xs'>Allergist</p>
+                        <Link to='/doctor-profile/6' className='xl:text-xl lg:text-xl md:text-xl md:text-xl sm:text-xl text-md text-primary font-bold'>Thomas Paul</Link>
+                        <p className='text-xs mt-2'>Allergist</p>
                     </div>
                 </SwiperSlide>
             </Swiper>
