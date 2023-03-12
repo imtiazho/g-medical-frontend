@@ -16,6 +16,7 @@ import Violenece from './Components/Violenece/Violenece';
 import Contact from './Components/Contact/Contact';
 import HomePageServiceDetails from './Components/HomePageServiceDetails/HomePageServiceDetails';
 import DoctorProfile from './Components/DoctorProfile/DoctorProfile';
+import ServiceDetailsPage from './Components/ServiceDetailsPage/ServiceDetailsPage';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path='/doctor-profile/:doctorId' element={<DoctorProfile></DoctorProfile>}></Route>
         <Route path='/about-sec' element={<About></About>}></Route>
         <Route path='/service-sec' element={<Service></Service>}></Route>
+        <Route path='/service/:serviceId' element={<ServiceDetailsPage />}></Route>
         <Route path='/blog-sec' element={<Blog></Blog>}></Route>
         <Route path='/portfolio-sec' element={<Portfolio></Portfolio>}>
           <Route index element={<AllPortfolio />}></Route>

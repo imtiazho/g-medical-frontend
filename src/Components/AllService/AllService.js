@@ -20,7 +20,7 @@ const AllService = () => {
                     </div>
                     <h3 className='text-2xl text-black font-medium'>Lung Diseases</h3>
                     <p className='text-secondary'>One of the key classifications is between traditio nal small molecule drugs; usually derived from chemical synthesis.</p>
-                    <Link className='text-primary text-lg font-medium'>Learn More </Link>
+                    <Link to='/service/1' className='text-primary text-lg font-medium'>Learn More </Link>
                 </div>
 
                 <div className='flex flex flex-col gap-6'>
@@ -29,7 +29,7 @@ const AllService = () => {
                     </div>
                     <h3 className='text-2xl text-black font-medium'>Lung Diseases</h3>
                     <p className='text-secondary'>One of the key classifications is between traditio nal small molecule drugs; usually derived from chemical synthesis.</p>
-                    <Link className='text-primary text-lg font-medium'>Learn More </Link>
+                    <Link to='/service/2' className='text-primary text-lg font-medium'>Learn More </Link>
                 </div>
 
                 <div className='flex flex flex-col gap-6'>
@@ -38,7 +38,7 @@ const AllService = () => {
                     </div>
                     <h3 className='text-2xl text-black font-medium'>Lung Diseases</h3>
                     <p className='text-secondary'>One of the key classifications is between traditio nal small molecule drugs; usually derived from chemical synthesis.</p>
-                    <Link className='text-primary text-lg font-medium'>Learn More </Link>
+                    <Link to='/service/3' className='text-primary text-lg font-medium'>Learn More </Link>
                 </div>
 
                 <div className='flex flex flex-col gap-6'>
@@ -47,7 +47,7 @@ const AllService = () => {
                     </div>
                     <h3 className='text-2xl text-black font-medium'>Lung Diseases</h3>
                     <p className='text-secondary'>One of the key classifications is between traditio nal small molecule drugs; usually derived from chemical synthesis.</p>
-                    <Link className='text-primary text-lg font-medium'>Learn More </Link>
+                    <Link to='/service/4' className='text-primary text-lg font-medium'>Learn More </Link>
                 </div>
 
                 <div className='flex flex flex-col gap-6'>
@@ -56,7 +56,7 @@ const AllService = () => {
                     </div>
                     <h3 className='text-2xl text-black font-medium'>Lung Diseases</h3>
                     <p className='text-secondary'>One of the key classifications is between traditio nal small molecule drugs; usually derived from chemical synthesis.</p>
-                    <Link className='text-primary text-lg font-medium'>Learn More </Link>
+                    <Link to='/service/5' className='text-primary text-lg font-medium'>Learn More </Link>
                 </div>
 
                 <div className='flex flex flex-col gap-6'>
@@ -65,7 +65,7 @@ const AllService = () => {
                     </div>
                     <h3 className='text-2xl text-black font-medium'>Lung Diseases</h3>
                     <p className='text-secondary'>One of the key classifications is between traditio nal small molecule drugs; usually derived from chemical synthesis.</p>
-                    <Link className='text-primary text-lg font-medium'>Learn More </Link>
+                    <Link to='/service/6' className='text-primary text-lg font-medium'>Learn More </Link>
                 </div>
 
                 <div className='flex flex flex-col gap-6'>
@@ -74,7 +74,7 @@ const AllService = () => {
                     </div>
                     <h3 className='text-2xl text-black font-medium'>Lung Diseases</h3>
                     <p className='text-secondary'>One of the key classifications is between traditio nal small molecule drugs; usually derived from chemical synthesis.</p>
-                    <Link className='text-primary text-lg font-medium'>Learn More </Link>
+                    <Link to='/service/7' className='text-primary text-lg font-medium'>Learn More </Link>
                 </div>
 
                 <div className='flex flex flex-col gap-6'>
@@ -83,7 +83,7 @@ const AllService = () => {
                     </div>
                     <h3 className='text-2xl text-black font-medium'>Lung Diseases</h3>
                     <p className='text-secondary'>One of the key classifications is between traditio nal small molecule drugs; usually derived from chemical synthesis.</p>
-                    <Link className='text-primary text-lg font-medium'>Learn More </Link>
+                    <Link to='/service/8' className='text-primary text-lg font-medium'>Learn More </Link>
                 </div>
 
                 <div className='flex flex flex-col gap-6'>
@@ -92,7 +92,7 @@ const AllService = () => {
                     </div>
                     <h3 className='text-2xl text-black font-medium'>Lung Diseases</h3>
                     <p className='text-secondary'>One of the key classifications is between traditio nal small molecule drugs; usually derived from chemical synthesis.</p>
-                    <Link className='text-primary text-lg font-medium'>Learn More </Link>
+                    <Link to='/service/9' className='text-primary text-lg font-medium'>Learn More </Link>
                 </div>
             </div>
         </div>

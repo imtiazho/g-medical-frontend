@@ -13,11 +13,11 @@ const DoctorProfileIntro = () => {
                 <div className='col-span-3 mt-7 flex flex-col gap-4'>
                     <p className='tracking-widest text-secondary font-bold'>ANESTHESIOLOGIST</p>
                     <h1 className='text-5xl mb-5 font-bold text-black'>Joshua Clark</h1>
-                    <div className='mb-5 flex items-center gap-3 text-secondary'>
-                        <span className='text-md'><FaFacebookF /></span>
-                        <span className='text-md'><FaLinkedinIn /></span>
-                        <span className='text-md'><FaPinterestP /></span>
-                        <span className='text-md'><BsInstagram /></span>
+                    <div className='mb-5 flex items-center gap-4 text-secondary'>
+                        <span className='text-lg'><FaFacebookF /></span>
+                        <span className='text-lg'><FaLinkedinIn /></span>
+                        <span className='text-lg'><FaPinterestP /></span>
+                        <span className='text-lg'><BsInstagram /></span>
                     </div>
                     <p className='text-secondary w-5/6'>Surgery of the respiratory tract is generally performed by specialists in cardiothoracic surgery (or thoracic surgery) though minor procedures may be performed by <br /> pulmonologists. Pulmonology is closely.</p>
                 </div>
