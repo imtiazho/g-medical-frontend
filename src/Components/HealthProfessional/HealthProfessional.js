@@ -24,7 +24,7 @@ const HealthProfessional = () => {
                 <SwiperSlide className='text-black text-center rounded overflow-hidden'>
                     <img className='mb-2 xl:mb-6 lg:mb-6 md:mb-6 sm:mb-6' src={doctorpic1} alt="" />
 
-                    <div>
+                    <div className='flex flex-col gap-0'>
                         <Link to='/doctor-profile/1' className='xl:text-xl lg:text-xl md:text-xl md:text-xl sm:text-xl text-md text-primary font-bold'>Jousha Clark</Link>
                         <p className='text-xs mt-2'>Anesthesiologist</p>
                     </div>
@@ -33,7 +33,7 @@ const HealthProfessional = () => {
                 <SwiperSlide className='text-black text-center rounded overflow-hidden'>
                     <img className='mb-2 xl:mb-6 lg:mb-6 md:mb-6 sm:mb-6' src={doctorpic2} alt="" />
 
-                    <div>
+                    <div className='flex flex-col gap-0'>
                         <Link to='/doctor-profile/2' className='xl:text-xl lg:text-xl md:text-xl md:text-xl sm:text-xl text-md text-primary font-bold'>Steven Jacob</Link>
                         <p className='text-xs mt-2'>Anesthesiologist</p>
                     </div>
@@ -42,7 +42,7 @@ const HealthProfessional = () => {
                 <SwiperSlide className='text-black text-center rounded overflow-hidden'>
                     <img className='mb-2 xl:mb-6 lg:mb-6 md:mb-6 sm:mb-6' src={doctorpic3} alt="" />
 
-                    <div>
+                    <div className='flex flex-col gap-0'>
                         <Link to='/doctor-profile/3' className='xl:text-xl lg:text-xl md:text-xl md:text-xl sm:text-xl text-md text-primary font-bold'>Jhua Bunton</Link>
                         <p className='text-xs mt-2'>Allergist</p>
                     </div>
@@ -51,7 +51,7 @@ const HealthProfessional = () => {
                 <SwiperSlide className='text-black text-center rounded overflow-hidden'>
                     <img className='mb-2 xl:mb-6 lg:mb-6 md:mb-6 sm:mb-6' src={doctorpic4} alt="" />
 
-                    <div>
+                    <div className='flex flex-col gap-0'>
                         <Link to='/doctor-profile/4' className='xl:text-xl lg:text-xl md:text-xl md:text-xl sm:text-xl text-md text-primary font-bold'>Emil Hadena</Link>
                         <p className='text-xs mt-2'>Neurosurgeon</p>
                     </div>
@@ -60,7 +60,7 @@ const HealthProfessional = () => {
                 <SwiperSlide className='text-black text-center rounded overflow-hidden'>
                     <img className='mb-2 xl:mb-6 lg:mb-6 md:mb-6 sm:mb-6' src={doctorpic5} alt="" />
 
-                    <div>
+                    <div className='flex flex-col gap-0'>
                         <Link to='/doctor-profile/5' className='xl:text-xl lg:text-xl md:text-xl md:text-xl sm:text-xl text-md text-primary font-bold'>David James</Link>
                         <p className='text-xs mt-2'>Anesthesiologist</p>
                     </div>
@@ -69,7 +69,7 @@ const HealthProfessional = () => {
                 <SwiperSlide className='text-black text-center rounded overflow-hidden'>
                     <img className='mb-2 xl:mb-6 lg:mb-6 md:mb-6 sm:mb-6' src={doctorpic6} alt="" />
 
-                    <div>
+                    <div className='flex flex-col gap-0'>
                         <Link to='/doctor-profile/6' className='xl:text-xl lg:text-xl md:text-xl md:text-xl sm:text-xl text-md text-primary font-bold'>Thomas Paul</Link>
                         <p className='text-xs mt-2'>Allergist</p>
                     </div>
