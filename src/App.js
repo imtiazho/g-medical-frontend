@@ -17,6 +17,7 @@ import Contact from './Components/Contact/Contact';
 import HomePageServiceDetails from './Components/HomePageServiceDetails/HomePageServiceDetails';
 import DoctorProfile from './Components/DoctorProfile/DoctorProfile';
 import ServiceDetailsPage from './Components/ServiceDetailsPage/ServiceDetailsPage';
+import BolgDetailsPage from './Components/BolgDetailsPage/BolgDetailsPage';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
           <Route path='violence-portfolio' element={<Violenece />}></Route>
         </Route>
         <Route path='/contact-sec' element={<Contact></Contact>}></Route>
+        <Route path='/blog-deta' element={<BolgDetailsPage></BolgDetailsPage>}></Route>
       </Routes>
       <Footer />
     </div>

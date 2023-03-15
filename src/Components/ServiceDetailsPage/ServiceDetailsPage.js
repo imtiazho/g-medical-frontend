@@ -7,7 +7,9 @@ import deptIcon2 from '../../assets/department-icon-2.png';
 import deptIcon3 from '../../assets/department-icon-3.png';
 import iconDepertment1 from '../../assets/icon-cl-dpment-1.png';
 import iconDepertment2 from '../../assets/icon-cl-dpment-2.png';
+import DepertmentPic from '../../assets/department-bg.jpg';
 import HealthProfessional from '../HealthProfessional/HealthProfessional';
+import { CiClock2 } from 'react-icons/ci';
 
 const ServiceDetailsPage = () => {
     const { serviceId } = useParams();
@@ -159,7 +161,7 @@ const ServiceDetailsPage = () => {
                         <div className='grid grid-cols-2 gap-14'>
                             <div className='flex flex-col gap-4'>
                                 <div className='flex justify-between items-baseline gap-2 pb-2'>
-                                    <p className='text-[#9c9c9c} text-[17px]'>Heart Cardioversion</p>
+                                    <p className='text-[#9c9c9c] text-[17px]'>Heart Cardioversion</p>
                                     <p className='font-bold text-secondary text-lg'>£1700.00</p>
                                 </div>
                                 <div className='flex justify-between items-baseline gap-2 pb-2'>
@@ -249,7 +251,75 @@ const ServiceDetailsPage = () => {
                         </form>
                     </div>
                 </div>
-                <div className='border col-span-2 text-black text-5xl'>Right Side</div>
+                <div className='col-span-2'>
+                    <div className='text-primary flex flex-col'>
+                        <h2 className='text-black mb-6 text-2xl font-bold'>General Surgery</h2>
+
+                        <div className='border-b py-3 flex items-center gap-3'>
+                            <div className='w-[2px] h-full bg-primary'></div>
+                            <p className='hover:translate-x-1 cursor-pointer duration-300 font-medium'>Asthma and Allergy</p>
+                        </div>
+                        <div className='border-b py-3 flex items-center gap-3'>
+                            <div className='w-[2px] h-full bg-primary'></div>
+                            <p className='hover:translate-x-1 cursor-pointer duration-300 font-medium'>Cancer Services</p>
+                        </div>
+                        <div className='border-b py-3 flex items-center gap-3'>
+                            <div className='w-[2px] h-full bg-primary'></div>
+                            <p className='hover:translate-x-1 cursor-pointer duration-300 font-medium'>Cystic Fibrosis</p>
+                        </div>
+                        <div className='border-b py-3 flex items-center gap-3'>
+                            <div className='w-[2px] h-full bg-primary'></div>
+                            <p className='hover:translate-x-1 cursor-pointer duration-300 font-medium'>Endoscopy</p>
+                        </div>
+                        <div className='border-b py-3 flex items-center gap-3'>
+                            <div className='w-[2px] h-full bg-primary'></div>
+                            <p className='hover:translate-x-1 cursor-pointer duration-300 font-medium'>Colorectal</p>
+                        </div>
+                        <div className='border-b py-3 flex items-center gap-3'>
+                            <div className='w-[2px] h-full bg-primary'></div>
+                            <p className='hover:translate-x-1 cursor-pointer duration-300 font-medium'>Hemorrhoids</p>
+                        </div>
+                    </div>
+
+                    <div style={{ background: `url(${DepertmentPic})`, backgroundPosition: "center", backgroundSize: "cover" }} className='mt-12 rounded flex flex-col gap-4 px-10 py-14'>
+                        <h1 className='text-white text-xl font-bold'>Department Address</h1>
+                        <p className='text-[#c3c3ff]'>Box 3233 1810 Kings Way King Street, 5th Avenue, New York</p>
+                    </div>
+
+                    <div className='flex flex-col gap-3 mt-12 text-[#17449e]'>
+                        <p className='text-black mb-4 font-bold text-2xl'>Department Hours</p>
+                        <span className='border-b pb-3 flex justify-between items-center'>
+                            <p>Monday</p>
+                            <span className='flex gap-2 items-center'>
+                                <p className='font-bold'>09:00 - 14:00</p>
+                                <span className='text-lg'><CiClock2 /></span>
+                            </span>
+                        </span>
+                        <span className='border-b pb-3 flex justify-between items-center'>
+                            <p>Tuesday</p>
+                            <span className='flex gap-2 items-center'>
+                                <p className='font-bold'>13:00 - 17:00</p>
+                                <span className='text-lg'><CiClock2 /></span>
+                            </span>
+                        </span>
+                        <span className='border-b pb-3 flex justify-between items-center'>
+                            <p>Thursday</p>
+                            <span className='flex gap-2 items-center'>
+                                <p className='font-bold'>10:00 - 13:00</p>
+                                <span className='text-lg'><CiClock2 /></span>
+                            </span>
+                        </span>
+                        <span className='border-b pb-3 flex justify-between items-center'>
+                            <p>Saturday</p>
+                            <span className='flex gap-2 items-center'>
+                                <p className='font-bold'>09:00 - 14:00</p>
+                                <span className='text-lg'><CiClock2 /></span>
+                            </span>
+                        </span>
+                    </div>
+
+                    <button className='btn btn-primary text-white rounded-none mt-10 btn-xl w-full'>Download PDF File</button>
+                </div>
             </div>
 
             <div className='mt-24'>
