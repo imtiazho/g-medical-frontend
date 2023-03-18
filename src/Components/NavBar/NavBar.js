@@ -32,8 +32,9 @@ const NavBar = () => {
                     {navItems}
                 </ul>
             </div>
-            <div className="navbar-end">
-                <Link className='bg-primary btn btn-sm text-white text-xs' to='/'>APPOINMENT</Link>
+            <div className="navbar-end flex items-center gap-2">
+                <Link className='bg-accent btn btn-sm text-white text-xs' to='/'>APPOINMENT</Link>
+                <Link className='bg-primary btn btn-sm text-white text-xs' to='/'>LOGIN</Link>
             </div>
         </div>
     );

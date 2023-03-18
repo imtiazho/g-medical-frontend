@@ -11,89 +11,77 @@ import s9 from '../../assets/eye-care.png';
 import { Link } from 'react-router-dom';
 
 const AllService = () => {
+    const data = [
+        {
+            _id: 1,
+            serviceIcon: s1,
+            serviceName: "Lung Diseases",
+            shortDetails: "One of the key classifications is between traditio nal small molecule drugs; usually derived from chemical synthesis.",
+        },
+        {
+            _id: 2,
+            serviceIcon: s2,
+            serviceName: "Heart Diseases",
+            shortDetails: "One of the key classifications is between traditio nal small molecule drugs; usually derived from chemical synthesis.",
+        },
+        {
+            _id: 3,
+            serviceIcon: s3,
+            serviceName: "Orthopaedic",
+            shortDetails: "One of the key classifications is between traditio nal small molecule drugs; usually derived from chemical synthesis.",
+        },
+        {
+            _id: 4,
+            serviceIcon: s4,
+            serviceName: "General Surgery",
+            shortDetails: "One of the key classifications is between traditio nal small molecule drugs; usually derived from chemical synthesis.",
+        },
+        {
+            _id: 5,
+            serviceIcon: s5,
+            serviceName: "Pharmacy",
+            shortDetails: "One of the key classifications is between traditio nal small molecule drugs; usually derived from chemical synthesis.",
+        },
+        {
+            _id: 6,
+            serviceIcon: s6,
+            serviceName: "Sports Injury",
+            shortDetails: "One of the key classifications is between traditio nal small molecule drugs; usually derived from chemical synthesis.",
+        },
+        {
+            _id: 7,
+            serviceIcon: s7,
+            serviceName: "Fever & Flu",
+            shortDetails: "One of the key classifications is between traditio nal small molecule drugs; usually derived from chemical synthesis.",
+        },
+        {
+            _id: 8,
+            serviceIcon: s8,
+            serviceName: "Dental Service",
+            shortDetails: "One of the key classifications is between traditio nal small molecule drugs; usually derived from chemical synthesis.",
+        },
+        {
+            _id: 9,
+            serviceIcon: s9,
+            serviceName: "Eye Care",
+            shortDetails: "One of the key classifications is between traditio nal small molecule drugs; usually derived from chemical synthesis.",
+        },
+    ]
     return (
         <div className='w-5/6 mx-auto mt-20'>
             <div className='grid grid-cols-3 gap-16'>
-                <div className='flex flex flex-col gap-6'>
-                    <div className='w-1/2'>
-                        <img src={s1} alt="" />
-                    </div>
-                    <h3 className='text-2xl text-black font-medium'>Lung Diseases</h3>
-                    <p className='text-secondary'>One of the key classifications is between traditio nal small molecule drugs; usually derived from chemical synthesis.</p>
-                    <Link to='/service/1' className='text-primary text-lg font-medium'>Learn More </Link>
-                </div>
-
-                <div className='flex flex flex-col gap-6'>
-                    <div className='w-1/2'>
-                        <img src={s2} alt="" />
-                    </div>
-                    <h3 className='text-2xl text-black font-medium'>Lung Diseases</h3>
-                    <p className='text-secondary'>One of the key classifications is between traditio nal small molecule drugs; usually derived from chemical synthesis.</p>
-                    <Link to='/service/2' className='text-primary text-lg font-medium'>Learn More </Link>
-                </div>
-
-                <div className='flex flex flex-col gap-6'>
-                    <div className='w-1/2'>
-                        <img src={s3} alt="" />
-                    </div>
-                    <h3 className='text-2xl text-black font-medium'>Lung Diseases</h3>
-                    <p className='text-secondary'>One of the key classifications is between traditio nal small molecule drugs; usually derived from chemical synthesis.</p>
-                    <Link to='/service/3' className='text-primary text-lg font-medium'>Learn More </Link>
-                </div>
-
-                <div className='flex flex flex-col gap-6'>
-                    <div className='w-1/2'>
-                        <img src={s3} alt="" />
-                    </div>
-                    <h3 className='text-2xl text-black font-medium'>Lung Diseases</h3>
-                    <p className='text-secondary'>One of the key classifications is between traditio nal small molecule drugs; usually derived from chemical synthesis.</p>
-                    <Link to='/service/4' className='text-primary text-lg font-medium'>Learn More </Link>
-                </div>
-
-                <div className='flex flex flex-col gap-6'>
-                    <div className='w-1/2'>
-                        <img src={s3} alt="" />
-                    </div>
-                    <h3 className='text-2xl text-black font-medium'>Lung Diseases</h3>
-                    <p className='text-secondary'>One of the key classifications is between traditio nal small molecule drugs; usually derived from chemical synthesis.</p>
-                    <Link to='/service/5' className='text-primary text-lg font-medium'>Learn More </Link>
-                </div>
-
-                <div className='flex flex flex-col gap-6'>
-                    <div className='w-1/2'>
-                        <img src={s3} alt="" />
-                    </div>
-                    <h3 className='text-2xl text-black font-medium'>Lung Diseases</h3>
-                    <p className='text-secondary'>One of the key classifications is between traditio nal small molecule drugs; usually derived from chemical synthesis.</p>
-                    <Link to='/service/6' className='text-primary text-lg font-medium'>Learn More </Link>
-                </div>
-
-                <div className='flex flex flex-col gap-6'>
-                    <div className='w-1/2'>
-                        <img src={s3} alt="" />
-                    </div>
-                    <h3 className='text-2xl text-black font-medium'>Lung Diseases</h3>
-                    <p className='text-secondary'>One of the key classifications is between traditio nal small molecule drugs; usually derived from chemical synthesis.</p>
-                    <Link to='/service/7' className='text-primary text-lg font-medium'>Learn More </Link>
-                </div>
-
-                <div className='flex flex flex-col gap-6'>
-                    <div className='w-1/2'>
-                        <img src={s3} alt="" />
-                    </div>
-                    <h3 className='text-2xl text-black font-medium'>Lung Diseases</h3>
-                    <p className='text-secondary'>One of the key classifications is between traditio nal small molecule drugs; usually derived from chemical synthesis.</p>
-                    <Link to='/service/8' className='text-primary text-lg font-medium'>Learn More </Link>
-                </div>
-
-                <div className='flex flex flex-col gap-6'>
-                    <div className='w-1/2'>
-                        <img src={s3} alt="" />
-                    </div>
-                    <h3 className='text-2xl text-black font-medium'>Lung Diseases</h3>
-                    <p className='text-secondary'>One of the key classifications is between traditio nal small molecule drugs; usually derived from chemical synthesis.</p>
-                    <Link to='/service/9' className='text-primary text-lg font-medium'>Learn More </Link>
-                </div>
+                {
+                    data.map(eachData =>
+                        <div className='flex flex flex-col gap-6'>
+                            <div className='w-1/2'>
+                                <img src={eachData.serviceIcon} alt="" />
+                            </div>
+                            <h3 className='text-2xl text-black font-medium'>{eachData.serviceName}</h3>
+                            <p className='text-secondary'>{eachData.shortDetails}</p>
+                            <Link to='/service/1' className='text-primary text-lg font-medium'>Learn More </Link>
+                        </div>
+                    )
+                }
             </div>
         </div>
     );
