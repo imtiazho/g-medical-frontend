@@ -11,7 +11,7 @@ const NewsLetterSubscribers = () => {
                 <div>
                     <div className='rounded overflow-hidden w-[70%] mx-auto bg-white flex items-center justify-between'>
                         <input type="text" className='w-full focus:outline-0 h-full bg-transparent px-[1rem] text-black' />
-                        <button className='bg-[#4D93E9] px-[25px] py-[10px] text-white'>Subscribe</button>
+                        <button className='bg-[#4D93E9] px-[25px] py-[10px] text-white bg-accent'>Subscribe</button>
                     </div>
                 </div>
             </div>

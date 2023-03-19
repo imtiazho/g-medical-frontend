@@ -4,154 +4,92 @@ import { BsPencil } from 'react-icons/bs';
 import { FaRegComment } from 'react-icons/fa';
 import { BiBookmarks } from 'react-icons/bi';
 import blog1Picture from '../../assets/blog-1.jpg';
+import blog1Picture1 from '../../assets/blog-details.jpg';
+import d1 from '../../assets/d1.jpg';
+import d2 from '../../assets/d2.jpg';
+import d3 from '../../assets/d3.jpg';
+import ourDoctorBanner from '../../assets/our-doctor.jpg';
+import BlogCard from '../BlogCard/BlogCard';
 
 
 const BlogContainer = () => {
     const [mousein, setMousein] = useState(false);
+    const data = [
+        {
+            _id: "1",
+            blogTopBanner: ourDoctorBanner,
+            blogPublishedDate: "FEBRUARY 28, 2019",
+            authorName: "JOHN SMITH",
+            blogType: "HEART RATE, MEDICINE",
+            blogComments: "NO COMMENTS",
+            blogTitle: "Using anthrax to fight cancer effectively",
+            blogTopPicture: blog1Picture1,
+            blogSubTitle: "I neglect my talents",
+            blogDisplayShortDetails: "I neglect my talents Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language",
+            blogDetailsOne: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life.",
+            anotherBlogLink: "New Law Article",
+            blogDetailsPic1: d1,
+            blogDetailsPic2: d2,
+            blogDetailsPic3: d3,
+            blogDetailsTwo: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line.",
+            blogPointsOne: ["Impenetrable foliage of my trees, and but a few stray gleams.", "A wonderful serenity has taken possession of my entire soul.", "I should be incapable of drawing a single stroke at the present moment."],
+            blogDetailsThree: "I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment and yet",
+            remarkablePoint: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarks.",
+            blogPointsTwo: ["Impenetrable foliage of my trees, and but a few stray gleams.", "A wonderful serenity has taken possession of my entire soul.", "I should be incapable of drawing a single stroke at the present moment."],
+        },
+        {
+            _id: "2",
+            blogTopBanner: ourDoctorBanner,
+            blogPublishedDate: "FEBRUARY 28, 2019",
+            authorName: "JOHN SMITH",
+            blogType: "HEART RATE, MEDICINE",
+            blogComments: "NO COMMENTS",
+            blogTitle: "Using anthrax to fight cancer effectively",
+            blogDisplayShortDetails: "I neglect my talents Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language",
+            blogTopPicture: blog1Picture1,
+            blogSubTitle: "I neglect my talents",
+            blogDetailsOne: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life.",
+            anotherBlogLink: "New Law Article",
+            blogDetailsPic1: d1,
+            blogDetailsPic2: d2,
+            blogDetailsPic3: d3,
+            blogDetailsTwo: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line.",
+            blogPointsOne: ["Impenetrable foliage of my trees, and but a few stray gleams.", "A wonderful serenity has taken possession of my entire soul.", "I should be incapable of drawing a single stroke at the present moment."],
+            blogDetailsThree: "I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment and yet",
+            remarkablePoint: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarks.",
+            blogPointsTwo: ["Impenetrable foliage of my trees, and but a few stray gleams.", "A wonderful serenity has taken possession of my entire soul.", "I should be incapable of drawing a single stroke at the present moment."],
+        },
+        {
+            _id: "3",
+            blogTopBanner: ourDoctorBanner,
+            blogPublishedDate: "FEBRUARY 28, 2019",
+            authorName: "JOHN SMITH",
+            blogType: "HEART RATE, MEDICINE",
+            blogComments: "NO COMMENTS",
+            blogTitle: "Using anthrax to fight cancer effectively",
+            blogTopPicture: blog1Picture1,
+            blogSubTitle: "I neglect my talents",
+            blogDisplayShortDetails: "I neglect my talents Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language",
+            blogDetailsOne: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life.",
+            anotherBlogLink: "New Law Article",
+            blogDetailsPic1: d1,
+            blogDetailsPic2: d2,
+            blogDetailsPic3: d3,
+            blogDetailsTwo: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line.",
+            blogPointsOne: ["Impenetrable foliage of my trees, and but a few stray gleams.", "A wonderful serenity has taken possession of my entire soul.", "I should be incapable of drawing a single stroke at the present moment."],
+            blogDetailsThree: "I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment and yet",
+            remarkablePoint: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarks.",
+            blogPointsTwo: ["Impenetrable foliage of my trees, and but a few stray gleams.", "A wonderful serenity has taken possession of my entire soul.", "I should be incapable of drawing a single stroke at the present moment."],
+        },
+    ]
+
     return (
         <div className='w-5/6 mx-auto mt-16'>
             <div className='grid grid-cols-3 gap-12'>
                 <div className='col-span-2'>
-                    <div onMouseLeave={() => setMousein(false)} onMouseEnter={() => setMousein(1)} className='flex flex-col gap-8 bg-white mx-5 shadow-xl mb-8'>
-                        <div className='relative overflow-hidden' >
-                            <img className={`${mousein === 1 && "scale-110"} duration-500`} src={blog1Picture} alt="" />
-                            {mousein === 1 && <span className='absolute bg-[#000074] opacity-50 w-full h-full bottom-0 rounded duration-500'></span>}
-                        </div>
-                        <div className='px-10 mb-10 flex flex-col gap-6'>
-                            <h2 className='font-bold text-4xl text-black'>Stem cell discovery could improve treatments for leukemia, other diseases</h2>
-                            <span className='flex justify-between items-center text-primary'>
-                                <span className='flex items-center gap-2 font-medium text-sm'>
-                                    <span><AiOutlineClockCircle /></span>
-                                    <p>FEBRUARY 28, 2019</p>
-                                </span>
-                                <span className='flex items-center gap-2 font-medium text-sm'>
-                                    <span><BsPencil /></span>
-                                    <p>JOHN SMITH</p>
-                                </span>
-                                <span className='flex items-center gap-2 font-medium text-sm'>
-                                    <span><BiBookmarks /></span>
-                                    <p>HEART RATE, MEDICINE</p>
-                                </span>
-                                <span className='flex items-center gap-2 font-medium text-sm'>
-                                    <span><FaRegComment /></span>
-                                    <p>NO COMMENTS</p>
-                                </span>
-                            </span>
-                            <p className='text-secondary'>I neglect my talents Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language...</p>
-                        </div>
-                    </div>
-                    <div onMouseLeave={() => setMousein(false)} onMouseEnter={() => setMousein(2)} className='flex flex-col gap-8 bg-white mx-5 shadow-xl mb-8'>
-                        <div className='relative overflow-hidden' >
-                            <img className={`${mousein === 2 && "scale-110"} duration-500`} src={blog1Picture} alt="" />
-                            {mousein === 2 && <span className='absolute bg-[#000074] opacity-50 w-full h-full bottom-0 rounded duration-500'></span>}
-                        </div>
-                        <div className='px-10 mb-10 flex flex-col gap-6'>
-                            <h2 className='font-bold text-4xl text-black'>Stem cell discovery could improve treatments for leukemia, other diseases</h2>
-                            <span className='flex justify-between items-center text-primary'>
-                                <span className='flex items-center gap-2 font-medium text-sm'>
-                                    <span><AiOutlineClockCircle /></span>
-                                    <p>FEBRUARY 28, 2019</p>
-                                </span>
-                                <span className='flex items-center gap-2 font-medium text-sm'>
-                                    <span><BsPencil /></span>
-                                    <p>JOHN SMITH</p>
-                                </span>
-                                <span className='flex items-center gap-2 font-medium text-sm'>
-                                    <span><BiBookmarks /></span>
-                                    <p>HEART RATE, MEDICINE</p>
-                                </span>
-                                <span className='flex items-center gap-2 font-medium text-sm'>
-                                    <span><FaRegComment /></span>
-                                    <p>NO COMMENTS</p>
-                                </span>
-                            </span>
-                            <p className='text-secondary'>I neglect my talents Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language...</p>
-                        </div>
-                    </div>
-                    <div onMouseLeave={() => setMousein(false)} onMouseEnter={() => setMousein(3)} className='flex flex-col gap-8 bg-white mx-5 shadow-xl mb-8'>
-                        <div className='relative overflow-hidden' >
-                            <img className={`${mousein === 3 && "scale-110"} duration-500`} src={blog1Picture} alt="" />
-                            {mousein === 3 && <span className='absolute bg-[#000074] opacity-50 w-full h-full bottom-0 rounded duration-500'></span>}
-                        </div>
-                        <div className='px-10 mb-10 flex flex-col gap-6'>
-                            <h2 className='font-bold text-4xl text-black'>Stem cell discovery could improve treatments for leukemia, other diseases</h2>
-                            <span className='flex justify-between items-center text-primary'>
-                                <span className='flex items-center gap-2 font-medium text-sm'>
-                                    <span><AiOutlineClockCircle /></span>
-                                    <p>FEBRUARY 28, 2019</p>
-                                </span>
-                                <span className='flex items-center gap-2 font-medium text-sm'>
-                                    <span><BsPencil /></span>
-                                    <p>JOHN SMITH</p>
-                                </span>
-                                <span className='flex items-center gap-2 font-medium text-sm'>
-                                    <span><BiBookmarks /></span>
-                                    <p>HEART RATE, MEDICINE</p>
-                                </span>
-                                <span className='flex items-center gap-2 font-medium text-sm'>
-                                    <span><FaRegComment /></span>
-                                    <p>NO COMMENTS</p>
-                                </span>
-                            </span>
-                            <p className='text-secondary'>I neglect my talents Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language...</p>
-                        </div>
-                    </div>
-                    <div onMouseLeave={() => setMousein(false)} onMouseEnter={() => setMousein(4)} className='flex flex-col gap-8 bg-white mx-5 shadow-xl mb-8'>
-                        <div className='relative overflow-hidden' >
-                            <img className={`${mousein === 4 && "scale-110"} duration-500`} src={blog1Picture} alt="" />
-                            {mousein === 4 && <span className='absolute bg-[#000074] opacity-50 w-full h-full bottom-0 rounded duration-500'></span>}
-                        </div>
-                        <div className='px-10 mb-10 flex flex-col gap-6'>
-                            <h2 className='font-bold text-4xl text-black'>Stem cell discovery could improve treatments for leukemia, other diseases</h2>
-                            <span className='flex justify-between items-center text-primary'>
-                                <span className='flex items-center gap-2 font-medium text-sm'>
-                                    <span><AiOutlineClockCircle /></span>
-                                    <p>FEBRUARY 28, 2019</p>
-                                </span>
-                                <span className='flex items-center gap-2 font-medium text-sm'>
-                                    <span><BsPencil /></span>
-                                    <p>JOHN SMITH</p>
-                                </span>
-                                <span className='flex items-center gap-2 font-medium text-sm'>
-                                    <span><BiBookmarks /></span>
-                                    <p>HEART RATE, MEDICINE</p>
-                                </span>
-                                <span className='flex items-center gap-2 font-medium text-sm'>
-                                    <span><FaRegComment /></span>
-                                    <p>NO COMMENTS</p>
-                                </span>
-                            </span>
-                            <p className='text-secondary'>I neglect my talents Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language...</p>
-                        </div>
-                    </div>
-                    <div onMouseLeave={() => setMousein(false)} onMouseEnter={() => setMousein(5)} className='flex flex-col gap-8 bg-white mx-5 shadow-xl mb-8'>
-                        <div className='relative overflow-hidden' >
-                            <img className={`${mousein === 5 && "scale-110"} duration-500`} src={blog1Picture} alt="" />
-                            {mousein === 5 && <span className='absolute bg-[#000074] opacity-50 w-full h-full bottom-0 rounded duration-500'></span>}
-                        </div>
-                        <div className='px-10 mb-10 flex flex-col gap-6'>
-                            <h2 className='font-bold text-4xl text-black'>Stem cell discovery could improve treatments for leukemia, other diseases</h2>
-                            <span className='flex justify-between items-center text-primary'>
-                                <span className='flex items-center gap-2 font-medium text-sm'>
-                                    <span><AiOutlineClockCircle /></span>
-                                    <p>FEBRUARY 28, 2019</p>
-                                </span>
-                                <span className='flex items-center gap-2 font-medium text-sm'>
-                                    <span><BsPencil /></span>
-                                    <p>JOHN SMITH</p>
-                                </span>
-                                <span className='flex items-center gap-2 font-medium text-sm'>
-                                    <span><BiBookmarks /></span>
-                                    <p>HEART RATE, MEDICINE</p>
-                                </span>
-                                <span className='flex items-center gap-2 font-medium text-sm'>
-                                    <span><FaRegComment /></span>
-                                    <p>NO COMMENTS</p>
-                                </span>
-                            </span>
-                            <p className='text-secondary'>I neglect my talents Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language...</p>
-                        </div>
-                    </div>
+                    {
+                        data.map(eachBlog => <BlogCard eachBlog={eachBlog} key={eachBlog._id}></BlogCard>)
+                    }
                 </div>
 
                 <div className='flex flex-col gap-8'>

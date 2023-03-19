@@ -33,6 +33,7 @@ function App() {
         <Route path='/service-sec' element={<Service></Service>}></Route>
         <Route path='/service/:serviceId' element={<ServiceDetailsPage />}></Route>
         <Route path='/blog-sec' element={<Blog></Blog>}></Route>
+        <Route path='/blog/:blogId' element={<BolgDetailsPage></BolgDetailsPage>}></Route>
         <Route path='/portfolio-sec' element={<Portfolio></Portfolio>}>
           <Route index element={<AllPortfolio />}></Route>
           <Route path='edu-portfolio' element={<Education />}></Route>
@@ -40,7 +41,6 @@ function App() {
           <Route path='violence-portfolio' element={<Violenece />}></Route>
         </Route>
         <Route path='/contact-sec' element={<Contact></Contact>}></Route>
-        <Route path='/blog-deta' element={<BolgDetailsPage></BolgDetailsPage>}></Route>
       </Routes>
       <Footer />
     </div>
