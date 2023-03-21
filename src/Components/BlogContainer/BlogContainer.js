@@ -10,6 +10,7 @@ import d2 from '../../assets/d2.jpg';
 import d3 from '../../assets/d3.jpg';
 import ourDoctorBanner from '../../assets/our-doctor.jpg';
 import BlogCard from '../BlogCard/BlogCard';
+import { Link } from 'react-router-dom';
 
 
 const BlogContainer = () => {
@@ -81,7 +82,9 @@ const BlogContainer = () => {
             remarkablePoint: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarks.",
             blogPointsTwo: ["Impenetrable foliage of my trees, and but a few stray gleams.", "A wonderful serenity has taken possession of my entire soul.", "I should be incapable of drawing a single stroke at the present moment."],
         },
-    ]
+    ];
+    const cloudData = ["ANTIBIOTIC", "DISEASES", "DRUGSHEALTH", "CAREHEART", "DRUGSHEALTH", "DISEASES", "CAREHEART"];
+    const othersServicesLink = ["Asthma and Allergy", "Cancer Services", "Cystic Fibrosis", "Endoscopy", "Colorectal", "Hemorrhoids"];
 
     return (
         <div className='w-5/6 mx-auto mt-16'>
@@ -96,62 +99,28 @@ const BlogContainer = () => {
                     <h2 className='text-black text-2xl font-bold'>Recent Articles</h2>
 
                     <div className='flex flex-col gap-6'>
-                        <div className='flex items-center gap-4'>
-                            <div className='w-20 h-20'>
-                                <img className='h-full w-full object-cover' src={blog1Picture} alt="" />
-                            </div>
-                            <div>
-                                <p className='text-black font-medium text-lg mb-2'>Using anthrax to fight cancer effectively</p>
-                                <div className='flex items-center gap-6 text-[#9C9CA8]'>
-                                    <span className='flex items-center gap-2 font-medium text-sm'>
-                                        <span className='text-xs'><AiOutlineClockCircle /></span>
-                                        <p className='text-xs'>FEBRUARY 28, 2019</p>
-                                    </span>
-                                    <span className='flex items-center gap-2 font-medium text-sm'>
-                                        <span className='text-xs'><BsPencil /></span>
-                                        <p className='text-xs'>JOHN SMITH</p>
-                                    </span>
+                        {
+                            data.slice(0, 3).map(eachBlog =>
+                                <div className='flex items-center gap-4'>
+                                    <div className='w-20 h-20'>
+                                        <img className='h-full w-full object-cover' src={eachBlog.blogTopPicture} alt="" />
+                                    </div>
+                                    <div className='flex flex-col gap-3'>
+                                        <Link className='text-black font-medium text-lg'>{eachBlog.blogTitle}</Link>
+                                        <div className='flex items-center gap-6 text-[#9C9CA8]'>
+                                            <span className='flex items-center gap-2 font-medium text-sm'>
+                                                <span className='text-xs'><AiOutlineClockCircle /></span>
+                                                <p className='text-xs'>{eachBlog.blogPublishedDate}</p>
+                                            </span>
+                                            <span className='flex items-center gap-2 font-medium text-sm'>
+                                                <span className='text-xs'><BsPencil /></span>
+                                                <p className='text-xs'>{eachBlog.authorName}</p>
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div className='flex items-center gap-4'>
-                            <div className='w-20 h-20'>
-                                <img className='h-full w-full object-cover' src={blog1Picture} alt="" />
-                            </div>
-                            <div>
-                                <p className='text-black font-medium text-lg mb-2'>Using anthrax to fight cancer effectively</p>
-                                <div className='flex items-center gap-6 text-[#9C9CA8]'>
-                                    <span className='flex items-center gap-2 font-medium text-sm'>
-                                        <span className='text-xs'><AiOutlineClockCircle /></span>
-                                        <p className='text-xs'>FEBRUARY 28, 2019</p>
-                                    </span>
-                                    <span className='flex items-center gap-2 font-medium text-sm'>
-                                        <span className='text-xs'><BsPencil /></span>
-                                        <p className='text-xs'>JOHN SMITH</p>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className='flex items-center gap-4'>
-                            <div className='w-20 h-20'>
-                                <img className='h-full w-full object-cover' src={blog1Picture} alt="" />
-                            </div>
-                            <div>
-                                <p className='text-black font-medium text-lg mb-2'>Using anthrax to fight cancer effectively</p>
-                                <div className='flex items-center gap-6 text-[#9C9CA8]'>
-                                    <span className='flex items-center gap-2 font-medium text-sm'>
-                                        <span className='text-xs'><AiOutlineClockCircle /></span>
-                                        <p className='text-xs'>FEBRUARY 28, 2019</p>
-                                    </span>
-                                    <span className='flex items-center gap-2 font-medium text-sm'>
-                                        <span className='text-xs'><BsPencil /></span>
-                                        <p className='text-xs'>JOHN SMITH</p>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
+                            )
+                        }
                     </div>
 
 
@@ -159,13 +128,9 @@ const BlogContainer = () => {
                         <h2 className='text-black mb-6 text-2xl font-bold'>Tag Cloud</h2>
 
                         <div className='flex flex-wrap gap-2'>
-                            <p className='bg-primary p-2 text-white text-xs'>ANTIBIOTIC</p>
-                            <p className='bg-primary p-2 text-white text-xs'>DISEASES</p>
-                            <p className='bg-primary p-2 text-white text-xs'>DRUGSHEALTH</p>
-                            <p className='bg-primary p-2 text-white text-xs'>CAREHEART</p>
-                            <p className='bg-primary p-2 text-white text-xs'>DRUGSHEALTH</p>
-                            <p className='bg-primary p-2 text-white text-xs'>DISEASES</p>
-                            <p className='bg-primary p-2 text-white text-xs'>CAREHEART</p>
+                            {
+                                cloudData.map(singleCloud => <Link className='bg-primary p-2 text-white text-xs'>{singleCloud}</Link>)
+                            }
                         </div>
                     </div>
 
@@ -178,30 +143,14 @@ const BlogContainer = () => {
                     <div className='text-primary flex flex-col'>
                         <h2 className='text-black mb-6 text-2xl font-bold'>Our Services</h2>
 
-                        <div className='border-b py-3 flex items-center gap-3'>
-                            <div className='w-[2px] h-full bg-primary'></div>
-                            <p className='hover:translate-x-1 cursor-pointer duration-300 font-medium'>Asthma and Allergy</p>
-                        </div>
-                        <div className='border-b py-3 flex items-center gap-3'>
-                            <div className='w-[2px] h-full bg-primary'></div>
-                            <p className='hover:translate-x-1 cursor-pointer duration-300 font-medium'>Cancer Services</p>
-                        </div>
-                        <div className='border-b py-3 flex items-center gap-3'>
-                            <div className='w-[2px] h-full bg-primary'></div>
-                            <p className='hover:translate-x-1 cursor-pointer duration-300 font-medium'>Cystic Fibrosis</p>
-                        </div>
-                        <div className='border-b py-3 flex items-center gap-3'>
-                            <div className='w-[2px] h-full bg-primary'></div>
-                            <p className='hover:translate-x-1 cursor-pointer duration-300 font-medium'>Endoscopy</p>
-                        </div>
-                        <div className='border-b py-3 flex items-center gap-3'>
-                            <div className='w-[2px] h-full bg-primary'></div>
-                            <p className='hover:translate-x-1 cursor-pointer duration-300 font-medium'>Colorectal</p>
-                        </div>
-                        <div className='border-b py-3 flex items-center gap-3'>
-                            <div className='w-[2px] h-full bg-primary'></div>
-                            <p className='hover:translate-x-1 cursor-pointer duration-300 font-medium'>Hemorrhoids</p>
-                        </div>
+                        {
+                            othersServicesLink.map(eachLink =>
+                                <div className='border-b py-3 flex items-center gap-3'>
+                                    <div className='w-[2px] h-full bg-primary'></div>
+                                    <p className='hover:translate-x-1 cursor-pointer duration-300 font-medium'>{eachLink}</p>
+                                </div>
+                            )
+                        }
                     </div>
                 </div>
             </div>

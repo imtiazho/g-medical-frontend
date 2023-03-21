@@ -33,8 +33,8 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end flex items-center gap-2">
-                <Link className='bg-accent btn btn-sm text-white text-xs' to='/'>APPOINMENT</Link>
-                <Link className='bg-primary btn btn-sm text-white text-xs' to='/'>LOGIN</Link>
+                <Link className='bg-accent btn btn-sm text-white text-xs' to='/appointment-sec'>APPOINMENT</Link>
+                <Link className='bg-primary btn btn-sm text-white text-xs' to='/login-sec'>LOGIN</Link>
             </div>
         </div>
     );

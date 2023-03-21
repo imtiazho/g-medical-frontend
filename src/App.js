@@ -18,6 +18,10 @@ import HomePageServiceDetails from './Components/HomePageServiceDetails/HomePage
 import DoctorProfile from './Components/DoctorProfile/DoctorProfile';
 import ServiceDetailsPage from './Components/ServiceDetailsPage/ServiceDetailsPage';
 import BolgDetailsPage from './Components/BolgDetailsPage/BolgDetailsPage';
+import Appointment from './Components/Appointment/Appointment';
+import Login from './Components/Login/Login';
+import SignUp from './Components/SignUp/SignUp';
+import InvoicePage from './Components/InvoicePage/InvoicePage';
 
 function App() {
   return (
@@ -41,6 +45,10 @@ function App() {
           <Route path='violence-portfolio' element={<Violenece />}></Route>
         </Route>
         <Route path='/contact-sec' element={<Contact></Contact>}></Route>
+        <Route path='/appointment-sec' element={<Appointment></Appointment>}></Route>
+        <Route path='/login-sec' element={<Login></Login>}></Route>
+        <Route path='/signup-sec' element={<SignUp></SignUp>}></Route>
+        <Route path='/invoice-sec' element={<InvoicePage></InvoicePage>}></Route>
       </Routes>
       <Footer />
     </div>
