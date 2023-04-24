@@ -48,6 +48,7 @@ function App() {
         <Route path='/appointment-sec' element={<Appointment></Appointment>}></Route>
         <Route path='/login-sec' element={<Login></Login>}></Route>
         <Route path='/signup-sec' element={<SignUp></SignUp>}></Route>
+        {/* Un register page */}
         <Route path='/invoice-sec' element={<InvoicePage></InvoicePage>}></Route>
       </Routes>
       <Footer />

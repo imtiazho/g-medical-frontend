@@ -22,9 +22,7 @@ const InvoicePage = () => {
 
                     <div className='flex flex-col gap-1 w-1/2'>
                         <p className='text-xl font-bold text-black'>Payment Method</p>
-                        <p className='font-medium'>Debit Card</p>
-                        <p className='font-medium'>XXXXXXXXXXXX-2541</p>
-                        <p className='font-medium'>HDFC Bank</p>
+                        <p className='font-medium'>Pay when you visit the doctor. Remember to carry this invoice with you.</p>
                     </div>
 
                     <div className='flex flex-col gap-1'>
@@ -44,14 +42,8 @@ const InvoicePage = () => {
                         <p className='font-medium'>Walter Roberson</p>
                         <p className='font-medium'>299 Star Trek Drive, Panama City,  Florida, 32405, USA</p>
                     </div>
-
-                    <div>
-
-                    </div>
                 </div>
             </div>
-
-
         </div>
     );
 };

@@ -1,9 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { AiOutlineClockCircle } from 'react-icons/ai';
 import { BsPencil } from 'react-icons/bs';
-import { FaRegComment } from 'react-icons/fa';
-import { BiBookmarks } from 'react-icons/bi';
-import blog1Picture from '../../assets/blog-1.jpg';
 import blog1Picture1 from '../../assets/blog-details.jpg';
 import d1 from '../../assets/d1.jpg';
 import d2 from '../../assets/d2.jpg';
@@ -13,8 +10,7 @@ import BlogCard from '../BlogCard/BlogCard';
 import { Link } from 'react-router-dom';
 
 
-const BlogContainer = () => {
-    const [mousein, setMousein] = useState(false);
+const BlogContainer = ({ blogsData }) => {
     const data = [
         {
             _id: "1",
@@ -91,7 +87,7 @@ const BlogContainer = () => {
             <div className='grid grid-cols-3 gap-12'>
                 <div className='col-span-2'>
                     {
-                        data.map(eachBlog => <BlogCard eachBlog={eachBlog} key={eachBlog._id}></BlogCard>)
+                        blogsData?.map(eachBlog => <BlogCard eachBlog={eachBlog} key={eachBlog._id}></BlogCard>)
                     }
                 </div>
 
@@ -100,7 +96,7 @@ const BlogContainer = () => {
 
                     <div className='flex flex-col gap-6'>
                         {
-                            data.slice(0, 3).map(eachBlog =>
+                            blogsData?.slice(0, 3).map(eachBlog =>
                                 <div className='flex items-center gap-4'>
                                     <div className='w-20 h-20'>
                                         <img className='h-full w-full object-cover' src={eachBlog.blogTopPicture} alt="" />

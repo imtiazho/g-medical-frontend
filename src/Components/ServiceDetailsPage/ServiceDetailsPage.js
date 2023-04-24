@@ -19,9 +19,20 @@ import s6 from '../../assets/sports-injury.png';
 import s7 from '../../assets/fever-flu.png';
 import s8 from '../../assets/dental.png';
 import s9 from '../../assets/eye-care.png';
+import { useQuery } from '@tanstack/react-query';
 
 const ServiceDetailsPage = () => {
     const { serviceId } = useParams();
+    const { serviceLoading, serviceError, data: serviceData } = useQuery({
+        queryKey: ['services'],
+        queryFn: () =>
+            fetch('http://localhost:5000/all-services').then(
+                (res) => res.json(),
+            ),
+    })
+    if (serviceLoading) {
+        return <p>Loading...</p>
+    }
 
     const data = [
         {
@@ -1268,6 +1279,7 @@ const ServiceDetailsPage = () => {
             ]
         }
     ]
+
     const sideNavList = ["Asthma and Allergy", "Cancer Services", "Cystic Fibrosis", "Endoscopy", "Colorectal", "Hemorrhoids"];
     const deptNavigatorCardData = [
         {
@@ -1286,13 +1298,13 @@ const ServiceDetailsPage = () => {
         }
     ]
 
-    const targetedService = data.find(service => service._id === serviceId);
+    const targetedService = serviceData?.find(service => service._id === serviceId);
 
     return (
         <div>
-            <div style={{ background: `url(${targetedService.serviceTopBannerBanner})`, backgroundPosition: "center", backgroundSize: "cover" }}>
+            <div style={{ background: `url(${targetedService?.serviceTopBannerBanner})`, backgroundPosition: "center", backgroundSize: "cover" }}>
                 <div className='w-5/6 mx-auto py-24'>
-                    <h1 className='text-white font-bold text-5xl mb-4'>{targetedService.serviceName}</h1>
+                    <h1 className='text-white font-bold text-5xl mb-4'>{targetedService?.serviceName}</h1>
                     <p className='text-lg'>Detail about our service</p>
                 </div>
             </div>
@@ -1301,15 +1313,15 @@ const ServiceDetailsPage = () => {
                 <div className='col-span-5 text-secondary'>
                     <div className='grid grid-cols-6 gap-8 items-center'>
                         <div className='col-span-2'>
-                            <img src={targetedService.sargonDoctor} alt="" />
+                            <img src={targetedService?.sargonDoctor} alt="" />
                         </div>
                         <div className='col-span-4 flex flex-col gap-6'>
-                            <h1 className='text-black font-bold text-3xl'>{targetedService.serviceAboutTitle}</h1>
-                            <p className='leading-relaxed'>{targetedService.mainTheme}</p>
+                            <h1 className='text-black font-bold text-3xl'>{targetedService?.serviceAboutTitle}</h1>
+                            <p className='leading-relaxed'>{targetedService?.mainTheme}</p>
 
                             <ul className='flex flex-col gap-3'>
                                 {
-                                    targetedService.servicePoints.map(eachServicepoint =>
+                                    targetedService?.servicePoints?.map(eachServicepoint =>
                                         <li className='flex items-center gap-2'>
                                             <div className='w-[15px] h-[15px] border border-primary rounded-full flex items-center justify-center'>
                                                 <div className='w-[7px] h-[7px] bg-primary rounded-full'></div>
@@ -1324,7 +1336,7 @@ const ServiceDetailsPage = () => {
 
                     <div className='mt-20 grid grid-cols-3 gap-10'>
                         {
-                            targetedService.someDeptservice.map(eachDept =>
+                            targetedService?.someDeptservice?.map(eachDept =>
                                 <div className='items-center text-center flex flex-col'>
                                     <div className='w-[150px] h-[150px] p-8'>
                                         <img src={eachDept.xsDeptIcon} alt="" />
@@ -1338,13 +1350,13 @@ const ServiceDetailsPage = () => {
 
                     <div className='mt-20 flex flex-col gap-4'>
                         {
-                            targetedService.accordionQustionAns.map(eachQA =>
-                                <div tabIndex={eachQA._id} className="collapse collapse-plus rounded">
+                            targetedService?.accordionQustionAns?.map((eachQA, index) =>
+                                <div tabIndex={index} className="collapse collapse-plus rounded">
                                     <div className="collapse-title text-primary text-xl font-bold bg-[#F3F3F3]">
                                         {eachQA.title}
                                     </div>
                                     <div className="collapse-content">
-                                        <div><p className='hidden'>{eachQA._id}</p>
+                                        <div><p className='hidden'>{index}</p>
                                             <p className='pt-4 text-lg'>{eachQA.mainTheme}</p>
                                         </div>
                                     </div>
@@ -1354,14 +1366,14 @@ const ServiceDetailsPage = () => {
                     </div>
 
                     <div className='mt-16 flex flex-col gap-5 border-b-[3px] pb-8 border-[#17449e]'>
-                        <h2 className='text-black text-3xl font-bold'>{targetedService.serviceAnotherPoint}</h2>
-                        <p className='text-[#17449e] text-xl'>{targetedService.serviceAnotherPointSubtitle}</p>
-                        <p className='leading-relaxed'>{targetedService.serviceAnotherPointDetails}</p>
+                        <h2 className='text-black text-3xl font-bold'>{targetedService?.serviceAnotherPoint}</h2>
+                        <p className='text-[#17449e] text-xl'>{targetedService?.serviceAnotherPointSubtitle}</p>
+                        <p className='leading-relaxed'>{targetedService?.serviceAnotherPointDetails}</p>
                     </div>
 
                     <div className='mt-16 grid grid-cols-2 gap-6'>
                         {
-                            deptNavigatorCardData.map(eachNavigatorcard =>
+                            deptNavigatorCardData?.map(eachNavigatorcard =>
                                 <div className='flex flex-col gap-6 items-start bg-[#F3F9FF] p-10 border'>
                                     <div className='flex gap-4 items-center'>
                                         <img src={eachNavigatorcard.deptNavigatorCardIcon} alt="" />
@@ -1380,7 +1392,7 @@ const ServiceDetailsPage = () => {
                         <div className='grid grid-cols-2 gap-14'>
                             <div className='flex flex-col gap-4'>
                                 {
-                                    targetedService.treatmentPriceList1.map(eachPrice =>
+                                    targetedService?.treatmentPriceList1?.map(eachPrice =>
                                         <div className='flex justify-between items-baseline gap-2 pb-2'>
                                             <p className='text-[#9c9c9c} text-[17px]'>{eachPrice.treatmentName}</p>
                                             <p className='font-bold text-secondary text-lg'>£{eachPrice.treatmentPrice}</p>
@@ -1390,7 +1402,7 @@ const ServiceDetailsPage = () => {
                             </div>
                             <div className='flex flex-col gap-4'>
                                 {
-                                    targetedService.treatmentPriceList2.map(eachPrice =>
+                                    targetedService?.treatmentPriceList2?.map(eachPrice =>
                                         <div className='flex justify-between items-baseline gap-2 pb-2'>
                                             <p className='text-[#9c9c9c} text-[17px]'>{eachPrice.treatmentName}</p>
                                             <p className='font-bold text-secondary text-lg'>£{eachPrice.treatmentPrice}</p>
@@ -1442,7 +1454,7 @@ const ServiceDetailsPage = () => {
                     <div className='text-primary flex flex-col'>
                         <h2 className='text-black mb-6 text-2xl font-bold'>General Surgery</h2>
                         {
-                            sideNavList.map(eachNav =>
+                            sideNavList?.map(eachNav =>
                                 <div className='border-b py-3 flex items-center gap-3'>
                                     <div className='w-[2px] h-full bg-primary'></div>
                                     <Link className='hover:translate-x-1 duration-300 font-medium'>{eachNav}</Link>
@@ -1459,7 +1471,7 @@ const ServiceDetailsPage = () => {
                     <div className='flex flex-col gap-3 mt-12 text-[#17449e]'>
                         <p className='text-black mb-4 font-bold text-2xl'>Department Hours</p>
                         {
-                            targetedService.deptHours.map(eachSchedule =>
+                            targetedService?.deptHours?.map(eachSchedule =>
                                 <span className='border-b pb-3 flex justify-between items-center'>
                                     <p>{eachSchedule.day}</p>
                                     <span className='flex gap-2 items-center'>

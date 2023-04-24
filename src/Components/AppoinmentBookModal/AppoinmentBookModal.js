@@ -21,6 +21,7 @@ const AppoinmentBookModal = () => {
                                 selected={date}
                                 onSelect={setDate}
                             />
+                            <p className='text-center'>Only 6 slots are Abailable on this date</p>
                         </div>
                         <form className='pr-6 pt-7 flex w-full flex-col gap-2'>
                             <input placeholder='Your Name' type="text" className='border w-full focus:outline-0 bg-[#F7F7F7] p-[1rem] text-black rounded-lg' />

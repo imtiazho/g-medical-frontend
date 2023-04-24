@@ -5,6 +5,24 @@ import parterPic3 from '../../assets/partner-3.jpg';
 import parterPic4 from '../../assets/partner-4.jpg';
 
 const Partner = () => {
+    const partnersLogos = [
+        {
+            _id: 1,
+            pic: parterPic1
+        },
+        {
+            _id: 2,
+            pic: parterPic2
+        },
+        {
+            _id: 3,
+            pic: parterPic3
+        },
+        {
+            _id: 4,
+            pic: parterPic4
+        }
+    ]
     return (
         <div className='mt-[12rem] w-5/6 mx-auto'>
             <span className='flex flex-col gap-3 items-center'>
@@ -13,10 +31,9 @@ const Partner = () => {
             </span>
 
             <div className='mt-16 grid grid-cols-4 items-center'>
-                <img src={parterPic1} alt="" />
-                <img src={parterPic2} alt="" />
-                <img src={parterPic3} alt="" />
-                <img src={parterPic4} alt="" />
+                {
+                    partnersLogos.map(partnersLogo => <img key={partnersLogo._id} src={partnersLogo.pic} alt="" />)
+                }
             </div>
         </div>
     );

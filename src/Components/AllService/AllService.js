@@ -9,8 +9,19 @@ import s7 from '../../assets/fever-flu.png';
 import s8 from '../../assets/dental.png';
 import s9 from '../../assets/eye-care.png';
 import { Link } from 'react-router-dom';
+import { useQuery } from '@tanstack/react-query';
 
 const AllService = () => {
+    const { serviceLoading, serviceError, data: serviceData } = useQuery({
+        queryKey: ['services'],
+        queryFn: () =>
+            fetch('http://localhost:5000/all-services').then(
+                (res) => res.json(),
+            ),
+    })
+    if (serviceLoading) {
+        return <p>Loading...</p>
+    }
 
     const data = [
         {
@@ -1055,7 +1066,7 @@ const AllService = () => {
         <div className='w-5/6 mx-auto mt-20'>
             <div className='grid grid-cols-3 gap-16'>
                 {
-                    data.map(eachData =>
+                    serviceData?.map(eachData =>
                         <div className='flex flex flex-col gap-6'>
                             <div className='w-1/2'>
                                 <img src={eachData.serviceIcon} alt="" />

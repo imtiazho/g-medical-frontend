@@ -25,7 +25,7 @@ const NavBar = () => {
                         {navItems}
                     </ul>
                 </div>
-                <Link className='lg:text-3xl font-bold text-primary flex items-center gap-1 sm:text-2xl'> <CiMedicalCross /> MEDIZ</Link>
+                <Link className='lg:text-3xl font-bold text-primary flex items-center gap-1 sm:text-2xl'> <CiMedicalCross /> G-MEDICAL</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -33,8 +33,8 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end flex items-center gap-2">
-                <Link className='bg-accent btn btn-sm text-white text-xs' to='/appointment-sec'>APPOINMENT</Link>
-                <Link className='bg-primary btn btn-sm text-white text-xs' to='/login-sec'>LOGIN</Link>
+                <Link className='bg-accent hover:bg-accent border-0 btn btn-sm text-white text-xs' to='/appointment-sec'>APPOINMENT</Link>
+                <Link className='bg-primary hover:bg-primary border-0 btn btn-sm text-white text-xs' to='/login-sec'>LOGIN</Link>
             </div>
         </div>
     );

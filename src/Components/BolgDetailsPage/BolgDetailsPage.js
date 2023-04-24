@@ -8,6 +8,8 @@ import d3 from '../../assets/d3.jpg';
 import { AiOutlineClockCircle } from 'react-icons/ai';
 import { BsPencil } from 'react-icons/bs';
 import { Link, useParams } from 'react-router-dom';
+import { useQuery } from '@tanstack/react-query';
+import SectionBanner from '../SectionBanner/SectionBanner';
 
 
 const BolgDetailsPage = () => {
@@ -77,63 +79,66 @@ const BolgDetailsPage = () => {
             blogPointsTwo: ["Impenetrable foliage of my trees, and but a few stray gleams.", "A wonderful serenity has taken possession of my entire soul.", "I should be incapable of drawing a single stroke at the present moment."],
         },
     ];
+    const { blogsLoading, blogsError, data: blogsData } = useQuery({
+        queryKey: ['blogs'],
+        queryFn: () =>
+            fetch('http://localhost:5000/all-blogs').then(
+                (res) => res.json(),
+            ),
+    })
+
+    if (blogsLoading) {
+        return <p>Loading...</p>
+    }
 
     const cloudData = ["ANTIBIOTIC", "DISEASES", "DRUGSHEALTH", "CAREHEART", "DRUGSHEALTH", "DISEASES", "CAREHEART"];
     const othersServicesLink = ["Asthma and Allergy", "Cancer Services", "Cystic Fibrosis", "Endoscopy", "Colorectal", "Hemorrhoids"];
-    const targetedBlog = data.find(eachBlog => eachBlog._id === blogId);
+    const targetedBlog = blogsData?.find(eachBlog => eachBlog._id === blogId);
 
     return (
         <div>
-            <div style={{ background: `url(${targetedBlog.blogTopBanner})`, backgroundPosition: "center", backgroundSize: "cover" }} className='w-full lg:h-96 xl:h-96 md:h-auto relative'>
-                <div className='absolute w-full h-full bg-[#000074] opacity-60 z-1'></div>
+            <SectionBanner banner={targetedBlog?.blogTopBanner} moto={targetedBlog?.blogTitle} subTitle={"John Smith - Masonry - Antibiotic - no comments"} />
 
-                <div className='flex justify-center items-center h-full z-10'>
-                    <span>
-                        <h1 className='text-center text-6xl mb-4 text-white z-10 relative'>{targetedBlog.blogTitle}</h1>
-                        <p className='text-center text-white z-10 relative text-lg'>John Smith - Masonry - Antibiotic - no comments</p>
-                    </span>
-                </div>
-            </div>
             <div className='w-5/6 mx-auto mt-16'>
                 <div className='grid grid-cols-3 gap-12'>
                     <div className='col-span-2'>
                         <div className='flex flex-col gap-6'>
                             <div className='px-6'>
-                                <img src={targetedBlog.blogTopPicture} alt="" />
+                                <img src={targetedBlog?.blogTopPicture} alt="" />
                             </div>
-                            <h1 className='mt-5 font-bold text-3xl text-black'>{targetedBlog.blogSubTitle}</h1>
-                            <p className='text-secondary leading-relaxed text-[18px]'>{targetedBlog.blogDetailsOne}</p>
+                            <h1 className='mt-5 font-bold text-3xl text-black'>{targetedBlog?.blogSubTitle}</h1>
+                            <p className='text-secondary leading-relaxed text-[18px]'>{targetedBlog?.blogDetailsOne}</p>
 
                             <span className='text-secondary'>
-                                <strong>Read This</strong>: <Link className=''>{targetedBlog.anotherBlogLink}</Link>
+                                <strong>Read This</strong>: <Link className=''>{targetedBlog?.anotherBlogLink}</Link>
                             </span>
                         </div>
 
                         <div className='mt-8 flex flex-col gap-6 border-b-2 pb-10'>
                             <div className='grid grid-cols-3 gap-4'>
-                                <img src={targetedBlog.blogDetailsPic1} alt="" />
-                                <img src={targetedBlog.blogDetailsPic2} alt="" />
-                                <img src={targetedBlog.blogDetailsPic3} alt="" />
+                                <img src={targetedBlog?.blogDetailsPic1} alt="" />
+                                <img src={targetedBlog?.blogDetailsPic2} alt="" />
+                                <img src={targetedBlog?.blogDetailsPic3} alt="" />
                             </div>
-                            <p className='text-secondary leading-relaxed text-lg'>{targetedBlog.blogDetailsTwo}</p>
+                            <p className='text-secondary leading-relaxed text-lg'>{targetedBlog?.blogDetailsTwo}</p>
 
                             <span className='text-secondary pl-5 text-lg leading-loose'>
                                 {
-                                    targetedBlog.blogPointsOne.map((eachPoint, index) =>
+                                    targetedBlog?.blogPointsOne.map((eachPoint, index) =>
                                         <p>{index + 1}. {eachPoint}</p>
                                     )
                                 }
                             </span>
 
-                            <p className='text-secondary leading-relaxed text-lg'>{targetedBlog.blogDetailsThree}</p>
+                            <p className='text-secondary leading-relaxed text-lg'>{targetedBlog?.blogDetailsThree}</p>
 
                             <div className='bg-[#F5F5F5] px-10 py-8 border-l-2'>
-                                <p className='text-[#767676] leading-relaxed text-xl font-bold italic'>{targetedBlog.remarkableLine}</p>
+                                <p className='text-[#767676] leading-relaxed text-xl font-bold italic'>{targetedBlog?.remarkableLine}</p>
                             </div>
 
                             <span className='text-secondary pl-5 text-lg leading-loose'>
                                 {
-                                    targetedBlog.blogPointsTwo.map((eachPoint, index) =>
+                                    targetedBlog?.blogPointsTwo.map((eachPoint, index) =>
                                         <p>{index + 1}. {eachPoint}</p>
                                     )
                                 }
