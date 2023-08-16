@@ -22,6 +22,11 @@ import Appointment from './Components/Appointment/Appointment';
 import Login from './Components/Login/Login';
 import SignUp from './Components/SignUp/SignUp';
 import InvoicePage from './Components/InvoicePage/InvoicePage';
+import { Toaster } from 'react-hot-toast';
+import UserDashboard from './Components/UserDashboard/UserDashboard';
+import AllInvoice from './Components/AllInvoice/AllInvoice';
+import MyAppoinment from './Components/MyAppoinment/MyAppoinment';
+import GotAppoinment from './Components/GotAppoinment/GotAppoinment';
 
 function App() {
   return (
@@ -50,8 +55,14 @@ function App() {
         <Route path='/signup-sec' element={<SignUp></SignUp>}></Route>
         {/* Un register page */}
         <Route path='/invoice-sec' element={<InvoicePage></InvoicePage>}></Route>
+        <Route path='/user-dashboard' element={<UserDashboard></UserDashboard>}>
+          <Route index element={<AllInvoice />}></Route>
+          <Route path='my-appointment' element={<MyAppoinment />}></Route>
+          <Route path='got-appointment' element={<GotAppoinment />}></Route>
+        </Route>
       </Routes>
       <Footer />
+      <Toaster />
     </div>
   );
 }

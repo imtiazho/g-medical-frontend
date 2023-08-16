@@ -7,7 +7,7 @@ import { RiHeartPulseLine } from 'react-icons/ri';
 
 const DirectionMap = () => {
     return (
-        <div className='grid grid-cols-3'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
             <div style={{ background: `url(${directionPic})`, backgroundPosition: "center", backgroundSize: "contain" }} className='w-full relative'>
                 <div className='absolute w-full h-full bg-[#000074] opacity-70'></div>
                 <div className='relative z-10 p-16 flex items-center gap-4 justify-center'>

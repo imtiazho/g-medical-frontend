@@ -7,7 +7,7 @@ import overview from '../../assets/overview.jpg';
 
 const HospitalOverView = () => {
     return (
-        <div className='xl:mt-52 lg:mt-24 md:mt-16 sm:mt-16 mt-16 w-11/12 lg:w-11/12 sm:w-11/12 xl:w-5/6 mx-auto sm:flex-wrap md:flex-wrap lg:flex-nowrap xl:flex-nowrap xl:flex lg:flex md:flex sm:flex grid justify-center items-center lg:gap-6 xl:gap-6 md:gap-12 sm:gap-8'>
+        <div className='xl:mt-52 lg:mt-24 md:mt-16 sm:mt-16 mt-16 w-[90%] lg:w-11/12 sm:w-11/12 xl:w-5/6 mx-auto sm:flex-wrap md:flex-wrap lg:flex-nowrap xl:flex-nowrap xl:flex lg:flex md:flex sm:flex grid justify-center items-center lg:gap-6 xl:gap-6 md:gap-12 sm:gap-8'>
             <div className='overview-left basis-1/2 sm:basis-[90%] sm:order-2 md:order-2 lg:order-1 xl:order-1 order-2'>
                 <p className='text-accent text-xl font-bold mb-4'>Working together for a healthy life</p>
                 <h2 className='text-4xl font-bold leading-[3rem] text-black mb-6'>Hospital top liberty – free <br /> choice of doctors</h2>

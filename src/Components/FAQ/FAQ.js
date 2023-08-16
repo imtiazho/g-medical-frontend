@@ -1,13 +1,12 @@
 import React from 'react';
-import { AiOutlineCheckCircle } from 'react-icons/ai';
 import FAQPicture from '../../assets/FAQ.jpg';
 
 const FAQ = () => {
     return (
-        <div className='grid grid-cols-2'>
-            <div style={{ background: `url(${FAQPicture})`, backgroundPosition: "center", backgroundSize: "cover" }} className='h-[650px]'></div>
-            <div className='py-20 px-20'>
-                <h1 className='text-4xl font-medium text-black mb-6'>Frequently Asked Questions</h1>
+        <div className='grid grid-cols-1 lg:grid-cols-2'>
+            <div style={{ background: `url(${FAQPicture})`, backgroundPosition: "center", backgroundSize: "cover" }} className='h-[650px] hidden lg:block'></div>
+            <div className='lg:p-20 p-10'>
+                <h1 className='lg:text-4xl text-3xl font-medium text-black mb-6'>Frequently Asked Questions</h1>
 
                 <div className='text-secondary'>
                     <div tabIndex={0} className="collapse collapse-plus border-b-2 border- bg-base-100">

@@ -2,7 +2,7 @@ import React from 'react';
 
 const SectionBanner = ({ banner, moto, subTitle }) => {
     return (
-        <div style={{ background: `url(${banner})`, backgroundPosition: "center", backgroundSize: "cover" }} className='w-full lg:h-96 xl:h-96 md:h-auto relative'>
+        <div style={{ background: `url(${banner})`, backgroundPosition: "center", backgroundSize: "cover" }} className='w-full lg:h-[400px] md:h-[300px] relative hidden lg:block'>
             <div className='absolute w-full h-full bg-[#000074] opacity-60 z-1'></div>
 
             <div className='flex justify-center items-center h-full z-10'>

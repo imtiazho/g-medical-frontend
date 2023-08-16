@@ -25,7 +25,7 @@ const QuestionAndAns = () => {
         }
     ]
     return (
-        <div className='w-5/6 mx-auto xl:mt-24 lg:mt-24 md:mt-18 grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 gap-20 items-center'>
+        <div className='w-[90%] lg:w-5/6 mx-auto xl:mt-24 lg:mt-24 md:mt-18 grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 gap-20 items-center'>
             <div className='xl:p-16 lg:p-8 md:p-24'>
                 <img src={QAPic} alt="" />
             </div>

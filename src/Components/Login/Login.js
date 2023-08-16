@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const Login = () => {
     return (
-        <div className='w-5/6 mx-auto'>
-            <div className='w-1/2 mx-auto my-20 flex flex-col gap-6 border shadow-lg bg-primary p-8 pb-16 rounded'>
+        <div className='lg:w-5/6 w-[90%] mx-auto'>
+            <div className='lg:w-1/2 md:w-[70%] w-[90%]  mx-auto my-20 flex flex-col gap-6 border shadow-lg bg-primary p-8 pb-16 rounded'>
                 <form className='flex flex-col gap-6'>
                     <p className='bg-primary py-3 text-center font-bold text-3xl text-white'>Login</p>
                     <input placeholder='Email' type="email" className='w-full focus:outline-0 h-full bg-white rounded p-[1rem] text-black text-md' />

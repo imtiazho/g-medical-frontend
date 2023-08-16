@@ -1,21 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CiMedicalCross } from 'react-icons/ci';
+import users from '../../assets/1.jpg';
 
 const NavBar = () => {
     const navItems = (
         <>
-            <li className='lg:text-black text-white'><Link className='active:text-white' to="/">HOME</Link></li>
-            <li className='lg:text-black text-white'><Link className='active:text-white' to="/about-sec">ABOUT</Link></li>
-            <li className='lg:text-black text-white'><Link className='active:text-white' to="/service-sec">SERVICE</Link></li>
-            <li className='lg:text-black text-white'><Link className='active:text-white' to="/our-doctor">DOCTORS</Link></li>
-            <li className='lg:text-black text-white'><Link className='active:text-white' to="/blog-sec">BLOG</Link></li>
-            <li className='lg:text-black'><Link className='active:text-white' to="/portfolio-sec">PORTFOLIO</Link></li>
-            <li className='lg:text-black text-white'><Link className='active:bg-secondary active:text-white' to="/contact-sec">CONTACT</Link></li>
+            <li className='lg:text-black text-white'><Link className='focus:bg-primary focus:text-white' to="/">HOME</Link></li>
+            <li className='lg:text-black text-white'><Link className='focus:bg-primary focus:text-white' to="/about-sec">ABOUT</Link></li>
+            <li className='lg:text-black text-white'><Link className='focus:bg-primary focus:text-white' to="/service-sec">SERVICE</Link></li>
+            <li className='lg:text-black text-white'><Link className='focus:bg-primary focus:text-white' to="/our-doctor">DOCTORS</Link></li>
+            <li className='lg:text-black text-white'><Link className='focus:bg-primary focus:text-white' to="/blog-sec">BLOG</Link></li>
+            <li className='lg:text-black text-white'><Link className='focus:bg-primary focus:text-white' to="/portfolio-sec">PORTFOLIO</Link></li>
+            <li className='lg:text-black text-white focus:bg-primary focus:text-white'><Link className='focus:bg-primary focus:text-white' to="/contact-sec">CONTACT</Link></li>
+            <li className='lg:text-black text-white focus:bg-primary focus:text-white'><Link className='focus:bg-primary focus:text-white' to="/login-sec">LOGIN</Link></li>
         </>
     )
     return (
-        <div className="navbar py-4 lg:w-5/6 mx-auto">
+        <div className="navbar py-4 w-full md:w-[97%] mx-auto">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -25,7 +27,7 @@ const NavBar = () => {
                         {navItems}
                     </ul>
                 </div>
-                <Link className='lg:text-3xl font-bold text-primary flex items-center gap-1 sm:text-2xl'> <CiMedicalCross /> G-MEDICAL</Link>
+                <Link to='/' className='lg:text-3xl font-bold text-primary flex items-center gap-1 sm:text-2xl'> <CiMedicalCross /> G</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -34,7 +36,9 @@ const NavBar = () => {
             </div>
             <div className="navbar-end flex items-center gap-2">
                 <Link className='bg-accent hover:bg-accent border-0 btn btn-sm text-white text-xs' to='/appointment-sec'>APPOINMENT</Link>
-                <Link className='bg-primary hover:bg-primary border-0 btn btn-sm text-white text-xs' to='/login-sec'>LOGIN</Link>
+                <Link className='w-[55px] h-[55px] rounded-full border-2 border-primary overflow-hidden' to='/user-dashboard'>
+                    <img className='' src={users} alt="" />
+                </Link>
             </div>
         </div>
     );

@@ -20,19 +20,10 @@ import s7 from '../../assets/fever-flu.png';
 import s8 from '../../assets/dental.png';
 import s9 from '../../assets/eye-care.png';
 import { useQuery } from '@tanstack/react-query';
+import SectionBanner from '../SectionBanner/SectionBanner';
 
 const ServiceDetailsPage = () => {
     const { serviceId } = useParams();
-    const { serviceLoading, serviceError, data: serviceData } = useQuery({
-        queryKey: ['services'],
-        queryFn: () =>
-            fetch('http://localhost:5000/all-services').then(
-                (res) => res.json(),
-            ),
-    })
-    if (serviceLoading) {
-        return <p>Loading...</p>
-    }
 
     const data = [
         {
@@ -1298,24 +1289,19 @@ const ServiceDetailsPage = () => {
         }
     ]
 
-    const targetedService = serviceData?.find(service => service._id === serviceId);
+    const targetedService = data?.find(service => service._id === serviceId);
 
     return (
         <div>
-            <div style={{ background: `url(${targetedService?.serviceTopBannerBanner})`, backgroundPosition: "center", backgroundSize: "cover" }}>
-                <div className='w-5/6 mx-auto py-24'>
-                    <h1 className='text-white font-bold text-5xl mb-4'>{targetedService?.serviceName}</h1>
-                    <p className='text-lg'>Detail about our service</p>
-                </div>
-            </div>
+            <SectionBanner banner={targetedService?.serviceTopBannerBanner} moto={targetedService?.serviceName} subTitle={targetedService?.serviceAboutTitle} />
 
-            <div className='w-5/6 mx-auto mt-20 grid grid-cols-7 gap-10'>
-                <div className='col-span-5 text-secondary'>
-                    <div className='grid grid-cols-6 gap-8 items-center'>
-                        <div className='col-span-2'>
+            <div className='w-[90%] lg:w-5/6 mx-auto lg:mt-20 mt-12 grid lg:grid-cols-7 grid-cols-1 gap-10'>
+                <div className='lg:col-span-5 text-secondary'>
+                    <div className='grid grid-cols-1 lg:grid-cols-6 gap-8 items-center'>
+                        <div className='lg:col-span-2'>
                             <img src={targetedService?.sargonDoctor} alt="" />
                         </div>
-                        <div className='col-span-4 flex flex-col gap-6'>
+                        <div className='lg:col-span-4 flex flex-col gap-6'>
                             <h1 className='text-black font-bold text-3xl'>{targetedService?.serviceAboutTitle}</h1>
                             <p className='leading-relaxed'>{targetedService?.mainTheme}</p>
 
@@ -1334,7 +1320,7 @@ const ServiceDetailsPage = () => {
                         </div>
                     </div>
 
-                    <div className='mt-20 grid grid-cols-3 gap-10'>
+                    <div className='mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
                         {
                             targetedService?.someDeptservice?.map(eachDept =>
                                 <div className='items-center text-center flex flex-col'>
@@ -1371,7 +1357,7 @@ const ServiceDetailsPage = () => {
                         <p className='leading-relaxed'>{targetedService?.serviceAnotherPointDetails}</p>
                     </div>
 
-                    <div className='mt-16 grid grid-cols-2 gap-6'>
+                    <div className='mt-16 grid lg:grid-cols-2 grid-cols-1 gap-6'>
                         {
                             deptNavigatorCardData?.map(eachNavigatorcard =>
                                 <div className='flex flex-col gap-6 items-start bg-[#F3F9FF] p-10 border'>
@@ -1389,7 +1375,7 @@ const ServiceDetailsPage = () => {
                     <div className='mt-12 border-b-[3px] pb-12 border-[#17449e]'>
                         <h2 className='text-[#17449e] font-bold text-2xl mb-8'>Treatment Price List</h2>
 
-                        <div className='grid grid-cols-2 gap-14'>
+                        <div className='grid lg:grid-cols-2 grid-cols-1 gap-14'>
                             <div className='flex flex-col gap-4'>
                                 {
                                     targetedService?.treatmentPriceList1?.map(eachPrice =>
@@ -1418,7 +1404,7 @@ const ServiceDetailsPage = () => {
                         <p className='text-[#17449e] text-xl'>We will send you a confirmation within 24 hours. <strong>Emergency?</strong> Call 1-2554-2356-33</p>
                         <p className='text-secondary text-[17px]'>Although pulmonary medicine only began to evolve as a medical specialty in the 1950s, William Welch and William Osler founded the ‘parent’ organization of the American Thoracic Society, the National Association.</p>
 
-                        <form className='w-4/5 mt-10 flex flex-col gap-6'>
+                        <form className='lg:w-4/5 w-full mt-10 flex flex-col gap-6'>
                             <div className='flex justify-between gap-2'>
                                 <input placeholder='Subject' type="text" className='w-full focus:outline-0 h-full bg-[#F7F7F7] p-[1rem] text-black' />
 
@@ -1450,7 +1436,7 @@ const ServiceDetailsPage = () => {
                         </form>
                     </div>
                 </div>
-                <div className='col-span-2'>
+                <div className='lg:col-span-2'>
                     <div className='text-primary flex flex-col'>
                         <h2 className='text-black mb-6 text-2xl font-bold'>General Surgery</h2>
                         {

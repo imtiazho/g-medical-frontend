@@ -13,22 +13,19 @@ const InvoicePage = () => {
 
                     <div className='flex flex-col gap-1 w-1/2'>
                         <p className='text-xl font-bold text-black'>Invoice From</p>
-                        <p className='font-medium'>Dr. Darren Elder</p>
-                        <p className='font-medium'>806 Twin Willow Lane, Old Forge, Newyork, USA</p>
+                        <p className=''>Dr. Darren Elder</p>
+                        <p className=''>806 Twin Willow Lane, Old Forge, Newyork, USA</p>
                     </div>
-
-
-
 
                     <div className='flex flex-col gap-1 w-1/2'>
                         <p className='text-xl font-bold text-black'>Payment Method</p>
-                        <p className='font-medium'>Pay when you visit the doctor. Remember to carry this invoice with you.</p>
+                        <p className=''>Pay when you visit the doctor. Remember to carry this invoice with you.</p>
                     </div>
 
                     <div className='flex flex-col gap-1'>
                         <h1 className='text-xl font-bold text-black'>Description</h1>
                         <div className='w-3/4'>
-                            <p className='font-medium'>An Appointment for General Consultation with Dr. Darren Elder on 12 Nov 2019 5:00PM to 6:00PM</p>
+                            <p className=''>An Appointment for General Consultation with Dr. Darren Elder on 12 Nov 2019 5:00PM to 6:00PM</p>
                         </div>
                     </div>
                 </div>
@@ -39,8 +36,8 @@ const InvoicePage = () => {
                     </div>
                     <div className='flex flex-col gap-1'>
                         <p className='text-xl font-bold text-black'>Invoice To</p>
-                        <p className='font-medium'>Walter Roberson</p>
-                        <p className='font-medium'>299 Star Trek Drive, Panama City,  Florida, 32405, USA</p>
+                        <p className=''>Walter Roberson</p>
+                        <p className=''>299 Star Trek Drive, Panama City,  Florida, 32405, USA</p>
                     </div>
                 </div>
             </div>

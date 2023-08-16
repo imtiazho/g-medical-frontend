@@ -29,10 +29,10 @@ const Cirtificated = () => {
         }
     ]
     return (
-        <div className='mt-[26rem] mx-auto w-5/6'>
-            <h2 className='text-center text-primary text-4xl font-bold'>Certificates & Standards</h2>
+        <div className='mt-[5rem] lg:mt-[22rem] xl:mt-[26rem] mx-auto w-[90%] lg:w-5/6'>
+            <h2 className='text-center text-primary text-[25px] sm:text-[28px] md:text-[32px] lg:text-[36px] font-bold'>Certificates & Standards</h2>
 
-            <span className='grid grid-cols-5 py-14'>
+            <span className='grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 py-8 lg:py-14'>
                 {
                     cirtificatePics.map(cirtificatePic => <img key={cirtificatePic._id} src={cirtificatePic.pic} alt="" />)
                 }
