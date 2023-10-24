@@ -25,6 +25,8 @@ const ClientAndDoctorCount = () => {
             object: "Health Plans"
         }
     ]
+
+
     return (
         <div className='relative w-[90%] lg:w-5/6 mx-auto '>
             <div style={{ background: `url(${ClientAndDoctorCountPic})`, backgroundPosition: "center", backgroundSize: "cover" }} className='grid w-full gap-12 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center py-10 px-20 rounded-lg absolute top-[-4rem] md:top-[-5rem]'>

@@ -1048,7 +1048,7 @@ const AllService = () => {
                 },
             ]
         }
-    ]
+    ];
 
     return (
         <div className='w-[90%] lg:w-5/6 mx-auto mt-20'>
